@@ -348,12 +348,20 @@ const tooltipCss = css`
     font-size: 12px;
     color: #333333;
     position: absolute;
-    top: 17px;
+    display: flex;
+    align-items: center;
+    top: 12px;
+    & span:first-child {
+      margin-right: 5px;
+    }
+    & svg {
+      height: 18px;
+    }
     &:hover {
       cursor: pointer;
     }
     @media (max-width: 960px) {
-      top: 17px;
+      top: 12px;
       &.first {
         left: 17px !important;
       }
@@ -681,10 +689,8 @@ export default class CountryInfo extends Component {
             step="1"
             value=${this.state.currentDateValue}
           />
-          <button onClick=${(e) => this.onBtnClick('right')} class="last ${popBtn}"></button>
-          <span title="Select End Date" class="last ${tooltipCss}" onClick=${(e) => this.onBtnClick('right')}>
-            <${IconBtn} /> ${this.state.lastDay}</span
-          >
+          <span class="last ${popBtn}"></span>
+          <span title="Select End Date" class="last ${tooltipCss}"> ${this.state.lastDay}</span>
         </div>
       </div>
     `;

@@ -457,7 +457,7 @@ const renderMenu = (menuItem, callback, currentDropdown, onDropDown, onLocateCha
           Submit data
         </a>
         <p>
-          Additionally, you can become part of the project by joining one of the following teams: 
+          Additionally, you can become part of the project by joining one of the following teams:
           <ul>
             <li>Editors</li>
             <li>Devs</li>
@@ -515,6 +515,7 @@ export class Menu extends Component {
       }
     });
   }
+
   showSideBar() {
     this.setState({
       showLateralMenu: true,
